@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Amanda Cardoso</title>
+        <!--<link rel="stylesheet" href="style.css">-->
+        <style>
+            body {
+                background: #ccc;
+            }
+            .photo {
+                border: 1px solid #505050;
+                border-radius: 50%;
+            }
+            #title, .subtitle, .post_title {
+                color: #505050
+            }
+            .post_title {
+                font-size: 16px;
+                font-style: italic;
+                margin: 0;
+                margin-bottom: 15px;
+            }
+            .post {
+                background: rgb(224, 223, 190);
+                padding: 15px;
+                border: 3px solid rgb(0, 0, 0);
+                margin-bottom: 15px;
+                border-radius: 5px;
+
+            }
+            .post_content {
+                margin: 0;
+                margin-bottom: 15px;
+            }
+            .image_content {
+                margin-bottom: 15px;
+                border-radius: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <header> <!--Header representa o cabeçalho de uma pagina ou de uma seção-->
+            <img class="photo" src="https://cdn.discordapp.com/attachments/1030491974408613929/1034522307403731025/unknown.png" alt="explicação sobre a tag img">
+            <h1 id="title">Amanda Cardoso</h1><!--titulo da pagina-->
+        </header>
+        <section> <!--section representa uma seção onde neste caso sera apresentado uma lista de posts-->
+            <header>
+                <h2 class="subtitle">Posts</h2>
+            </header>
+            <article class="post"> <!--usado para determinar um artigo-->
+                <header>
+                    <h3 class="post_title">Post #1</h3>
+                    <img class="image_content" src="https://cdn.discordapp.com/attachments/1030491974408613929/1034522307403731025/unknown.png" alt="explicação sobre a tag img">
+                </header>
+                <p class="post_content">
+                    Um texto de <a href="mailto:amandacardoso3105@hotmail.com">exemplo</a> para ser atribuido alguns <a href="https://www.linkedin.com/in/amanda-cardoso-95b927217/" target="_blank">links</a> aleatórios a fins de aprendizado!
+                </p>
+            </article>
+        </section>
+    <footer>
+        <ul>
+            <li> <a href="mailto:amandacardoso3105@hotmail.com">amandacardoso3105@hotmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/amanda-cardoso-95b927217/" target="_blank">Linkedin</a></li>
+            <li><a>Github</a></li>
+        </ul>
+    </footer> <!--footer nada mais é que um rodapé para uma pagina ou uma seção-->
+    </body>
+
+</html>
+<!--
+Explicando melhor sobre as semânticas utilizadas nessa aula:
+
+<section> representa uma seção genérica de conteúdo, como uma lista de artigos
+<header> representa um cabeçalho da sua pagina ou de parte da pagina, pode ser o cabeçalho de uma section
+<article> representa um conteudo relevante dentro de sua pag como um artigo de um blog
+<aside> representa um conteudo relacionado ou conteudo principal da pag, como links relacionado ou biografia de um autor e normalmente representado por uma barra lateral
+<footer> pode ser um rod´pé de uma pagina ou de parte da pagina, pode ser o rodapé de uma section ou de um article
+<h1> ao <h6> representa titulos e suas relevancias, unica regra é que so pode ser usado um h1 por pagina
+
+
+
+-->

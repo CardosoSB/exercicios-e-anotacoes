@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fundamentos flex flow</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 500px;
+            margin-bottom: 10px;
+           
+        }
+        .default{
+            flex-flow: row nowrap; /*a propriedade flex-flow nada mais é a junção das propriedades flex-direction e flex-wrap
+            onde ele da o direcionamento/posicionamento dos itens dentro do container, com o row e o nowrap esses dois valores são
+            valores padrão, nao muda em nada o posicionamento dos itens dentro do container
+            1 2 3 4 5 6 */
+        }
+        .wrap{
+            flex-flow: row wrap; /*com os valores row e wrap o container irá distribuir os itens quebrando linhas que darão 
+            sequencia pra baixo caso todo o conteúdo nao caiba dentro do container, e com o row ele determina que a ordem seja padrão 
+            1 2 3 4
+            5 6  vindo da esquerda para a direita*/
+        }
+        .wrap-reverse{
+            flex-flow: row wrap-reverse; /*com os valores row e wrap-reverse o container irá distribuir os itens quebrando linhas que darão 
+            sequencia pra cima caso todo o conteúdo nao caiba dentro do container, e com o row ele determina que a ordem seja padrão 
+            5 6
+            1 2 3 4 vindo da esquerda para a direita*/
+        }
+        .r-nowrap {
+            flex-flow: row-reverse nowrap; /*com o row-reverse e o nowrap os itens do conteiner serao distribuidos de forma contraria,
+            vindo da direita para a esquerda e com o valor nowrap ele dará sequencia lado a lado sem quebrar a linha, mantendo-se na horizontal
+            6 5 4 3 2 1 */
+        }
+        .r-wrap {
+            flex-flow: row-reverse wrap; /*com o row-reverse e o wrap os itens do conteiner serao distribuidos de forma contraria
+            vindo da direita para a esquerda e com o valor wrap ele dará sequencia quebrando a linha para baixo caso o conteudo 
+            nao caiba dentro do container.
+            4 3 2 1
+            6 5*/
+        }
+        .rr-wrap {
+            flex-flow: row-reverse wrap-reverse ;/*com o row-reverse e o wrap-reverse os itens do conteiner serao distribuidos 
+            de forma contraria e em ordem contraria tambem, vindo da direita para a esquerda e com o valor wrap-reverse ele dará 
+            sequencia quebrando a linha para baixo caso o conteudo ao caiba dentro do container porem de forma contraria tambem, o que vinha
+            por ultimo vem primeiro, ou seja o ultimo item de uma lista vem em primeiro para dar sequencia de cima para baixo.
+                6 5
+            4 3 2 1*/
+        }
+        .item {
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> default: row e nowrap</h1>
+    <div class="flex-container default">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <h1>row e wrap</h1>
+    <div class="flex-container wrap">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h1>row e wrap reverse</h1>
+    <div class="flex-container wrap-reverse">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h1>row-reverse e nowrap</h1>
+    <div class="flex-container r-nowrap" >
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h1>row-reverse e wrap</h1>
+    <div class="flex-container r-wrap" >
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+    <h1>row-reverse e wrap-reverse</h1>
+    <div class="flex-container rr-wrap" >
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+</html>
